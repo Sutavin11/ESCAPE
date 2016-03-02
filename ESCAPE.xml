@@ -1,14 +1,24 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_setmotors" id="24" inline="true" x="279" y="156">
-    <value name="BOTHMOVLEFT">
-      <block type="math_number" id="31">
-        <field name="NUM">0</field>
+  <block type="controls_whileUntil" id="39" inline="false" x="258" y="132">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_object" id="46">
+        <field name="OBJECT">RIGHTSIDE</field>
       </block>
     </value>
-    <value name="BOTHMOVRIGHT">
-      <block type="math_number" id="32">
-        <field name="NUM">200</field>
+    <statement name="DO">
+      <block type="movement_setmotors" id="24" inline="true">
+        <value name="BOTHMOVLEFT">
+          <block type="math_number" id="31">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <value name="BOTHMOVRIGHT">
+          <block type="math_number" id="32">
+            <field name="NUM">200</field>
+          </block>
+        </value>
       </block>
-    </value>
+    </statement>
   </block>
 </xml>
