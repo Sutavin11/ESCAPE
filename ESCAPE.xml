@@ -1,37 +1,42 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="19" inline="false" x="254" y="110">
+  <block type="controls_whileUntil" id="98" inline="false" x="286" y="175">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
-      <block type="sensor_object" id="63">
+      <block type="sensor_object" id="121">
         <field name="OBJECT">RIGHTSIDE</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_right" id="10"></block>
-    </statement>
-    <next>
-      <block type="controls_if" id="173" inline="false">
-        <mutation else="1"></mutation>
-        <value name="IF0">
-          <block type="math_bitwise" id="149" inline="true">
-            <field name="OP">AND</field>
-            <value name="A">
-              <block type="sensor_object" id="156">
-                <field name="OBJECT">LEFTFRONT</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="sensor_object" id="157">
-                <field name="OBJECT">RIGHTFRONT</field>
+      <block type="movement_rightmotor" id="1" inline="true">
+        <value name="MOVRIGHT">
+          <block type="math_number" id="2">
+            <field name="NUM">50</field>
+          </block>
+        </value>
+        <next>
+          <block type="robot_delay" id="4" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="5">
+                <field name="NUM">5000</field>
               </block>
             </value>
           </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="controls_if" id="137" inline="false">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="sensor_object" id="158">
+            <field name="OBJECT">LEFTFRONT</field>
+          </block>
         </value>
         <statement name="DO0">
-          <block type="movement_right" id="183"></block>
+          <block type="movement_right" id="169"></block>
         </statement>
         <statement name="ELSE">
-          <block type="movement_forward" id="241"></block>
+          <block type="movement_forward" id="183"></block>
         </statement>
       </block>
     </next>
