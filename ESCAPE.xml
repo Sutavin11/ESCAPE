@@ -30,9 +30,9 @@
         <statement name="DO0">
           <block type="movement_right" id="183"></block>
         </statement>
-        <next>
-          <block type="movement_left" id="198"></block>
-        </next>
+        <statement name="ELSE">
+          <block type="movement_forward" id="241"></block>
+        </statement>
       </block>
     </next>
   </block>
