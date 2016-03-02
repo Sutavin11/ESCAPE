@@ -31,11 +31,7 @@
           <block type="movement_right" id="183"></block>
         </statement>
         <next>
-          <block type="movement_left" id="198">
-            <next>
-              <block type="movement_forward" id="208"></block>
-            </next>
-          </block>
+          <block type="movement_left" id="198"></block>
         </next>
       </block>
     </next>
